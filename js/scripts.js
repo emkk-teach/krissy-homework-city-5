@@ -24,12 +24,12 @@ $(document).ready(function() {
 			$('body').removeClass();
 			$('body').addClass("sydney");
 			//how do i do the default picture for cities not listed??
-		// } else () {
-		// 	$('body').removeClass();
-		// 	$('body').addClass("citypix");
-		// }
+		} else {
+			$('body').removeClass();
+			$('body').addClass("citypix");
+		}
 	}
-
+});
 
 
 // $('#city-type').submit(inputCity);
@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 
 
-});
+
 
 //goal: upload the correct background picture so the input city matches the picture
 //If New York, New York City or NYC is input, then upload the NYC backdrop
