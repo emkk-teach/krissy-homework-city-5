@@ -2,28 +2,33 @@ $(document).ready(function() {
 
 	// $('#city-type').submit(typeCity);
 	$('#submit-btn').click(showCityPicture);
-
+//goal: upload the correct background picture so the input city matches the picture
 	function showCityPicture() {
 		event.preventDefault();
 
-		var city = $('#city-type').val();
+		var city = $.trim($('#city-type').val().toUpperCase());
 
-		if (city == "New York City" || city == "New York" || city == "NYC") {
+//If New York, New York City or NYC is input, then upload the NYC backdrop
+		if (city == "NEW YORK CITY" || city == "NEW YORK" || city == "NYC") {
 			$('body').removeClass();
 			$('body').addClass("nyc");
-		} else if (city == "San Francisco" || city == "SF" || city == "Bay Area") {
+//If San Francisco, SF, or Bay Area is input, then upload the SF backdrop			
+		} else if (city == "SAN FRANCISCO" || city == "SF" || city == "BAY AREA") {
 			$('body').removeClass();
-			$('body').addClass("sf")
-		} else if (city == "Los Angeles" || city == "LA" || city == "LAX") {
+			$('body').addClass("sf");
+//IF Los Angeles, LA or LAX is input, upload the LA backdrop
+		} else if (city == "LOS ANGELES" || city == "LA" || city == "LAX") {
 			$('body').removeClass();
 			$('body').addClass("la");
-		} else if (city == "Austin" || city == "ATX") {
+//If Austin or ATX is input, upload the Austin backdrop
+		} else if (city == "AUSTIN" || city == "ATX") {
 			$('body').removeClass();
 			$('body').addClass("austin");
-		} else if (city == "Sydney" || city == "SYD") {
+//If Sydney or SYD is input, upload the Sydney backdrop
+		} else if (city == "SYDNEY" || city == "SYD") {
 			$('body').removeClass();
 			$('body').addClass("sydney");
-			//how do i do the default picture for cities not listed??
+//If none of these cities are input, keep the original backdrop
 		} else {
 			$('body').removeClass();
 			$('body').addClass("citypix");
@@ -32,58 +37,4 @@ $(document).ready(function() {
 });
 
 
-// $('#city-type').submit(inputCity);
 
-// function inputCity() {
-// 	event.preventDefault();
-
-// 	$('')
-	
-// 	city = NYC || SF || LA || ATX || SYD;
-// }
-
-// $('#submit-btn').click(showCityPicture);
-
-// 	if (NYC == "New York City" || NYC == "New York" || NYC == "NYC") {
-// 		$('#submit-btn').click(backgroundImage url = '../images/nyc.jpg');
-// } else {
-// 	$('#submit-btn').click(backgroundImage url = '../images/citipix_skyline.jpg');
-// }
-
-// 	}
-	
-
-
-// $('#submit-btn').click(showCityPicture);
-
-// function showCityPicture(){
-// 	event.preventDefault();
-
-// 	var city = $('#city-type').val();
-// 	$('#city-type').html('<td>' + newEntry + '</td>');
-
-// 	if (city-type == "New York City" || city-type == "NYC" || city-type == "New York") {
-// 		$('#submit-btn').click
-// 		$('body').css.backgroundImage = url('../images/nyc.jpg');
-// 	}
-// }
-
-// function showNewYorkCity() {
-// 	event.preventDefault();
-// 	$('newYorkCity').show();
-// }
-
-// $('#submit-btn').click(showNewYorkCity);
-
-
-
-
-
-
-//goal: upload the correct background picture so the input city matches the picture
-//If New York, New York City or NYC is input, then upload the NYC backdrop
-//If San Francisco, SF, or Bay Area is input, then upload the SF backdrop
-//IF Los Angeles, LA or LAX is input, upload the LA backdrop
-//If Austin or ATX is input, upload the Austin backdrop
-//If Sydney or SYD is input, upload the Sydney backdrop
-//If none of these cities are input, keep the original backdrop
